@@ -11,6 +11,8 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # Запускається тільки якщо всі перевірки пройшли успішно
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
